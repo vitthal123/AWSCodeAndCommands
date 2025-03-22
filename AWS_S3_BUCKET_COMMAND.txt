@@ -1,0 +1,32 @@
+## Getting Information of commands
+>> aws s3 help
+
+## List of all Buckets
+>> aws s3 ls
+>> aws s3 ls --profile <ProfileName>
+
+## To get all Folder Inside Buckets
+>> aws s3 ls s3://<BucketName>  --recursive
+
+## Deleting folder Values
+>> aws s3 rm s3://<BucketName>/<FolderName>  --recursive
+
+## Copying Files / Folder
+>> aws s3 cp <Local Folder> S://<BucketName>/<FolderName> --recursive 
+
+## Copying objects from one location to Another
+>> aws s3 cp <Local Folder> \
+   s3://<BucketName>/<FolderName> \
+   --recursive
+   --exclude ".sql"
+   --include ".csv"
+   --profile <ProfileName>
+   
+## Creating Bucket 
+>> aws s3 mb s3://<bucket-name>
+>> aws s3 s3://<bucket-name> --region <RegionName>
+
+
+## Deleting Bucket / files 
+>> aws s3 rm s3://<BucketName> --recursive    # Deleting all files from Bucket
+>> aws s3 rb s3://<BucketName>                # Deleting Bucket 
